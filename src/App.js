@@ -88,15 +88,10 @@ export const App = () => {
             terminadas++;
         } 
     }
-
-    let porcentaje = terminadas / state.length;
-    if (porcentaje === 0) {
-        // Eliminar la barra de progreso
-     } else {
-        // Actualizar la barra de progreso con el nuevo porcentaje
-     }
-    
-
+    let porcentaje = 0;
+    if (state.length > 0) {
+        porcentaje = terminadas / state.length;
+    }
     return (
         <>
             <Header/>
